@@ -1,0 +1,16 @@
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\api\ServidorApi.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\config\Conexion.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\config\Configuracion.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\dao\AsistenciaDAO.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\dao\DispositivoDAO.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\dao\EmpleadoDAO.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\dao\MarcacionDAO.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\dao\UsuarioDAO.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\Main.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\modelo\AsistenciaDiaria.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\modelo\Dispositivo.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\modelo\Empleado.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\modelo\Marcacion.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\modelo\Usuario.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\servicio\ImportadorDahuaCSV.java
+C:\Users\duran\OneDrive\Documentos\SistemaBiometricoInteligente\SistemaBiometricoInteligente\src\main\java\com\sbi\servicio\ImportadorDahuaXML.java

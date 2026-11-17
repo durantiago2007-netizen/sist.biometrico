@@ -1,0 +1,30 @@
+[hidden] { display: none !important; }
+:root { --azul:#1f4e8c; --fondo:#f3f5f9; --borde:#d9dee7; --texto:#1d2330; --ok:#1d7a46; --mal:#b3261e; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, Segoe UI, Arial, sans-serif; background:var(--fondo); color:var(--texto); }
+button { background:var(--azul); color:#fff; border:0; border-radius:6px; padding:8px 14px; cursor:pointer; font-size:14px; }
+button.secundario { background:#fff; color:var(--azul); border:1px solid var(--azul); }
+input, select { padding:8px; border:1px solid var(--borde); border-radius:6px; font-size:14px; }
+.login { min-height:100vh; display:grid; place-items:center; padding:16px; }
+.tarjeta { background:#fff; padding:28px; border-radius:10px; box-shadow:0 2px 12px #0001; width:100%; max-width:360px; display:grid; gap:12px; }
+.tarjeta h1 { margin:0; font-size:20px; color:var(--azul); }
+.tarjeta label { display:grid; gap:4px; font-size:14px; }
+.sub { margin:0; color:#667; }
+.error { color:var(--mal); min-height:1em; }
+header { background:#fff; border-bottom:1px solid var(--borde); padding:10px 16px; display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+header nav { display:flex; gap:6px; flex-wrap:wrap; flex:1; }
+header nav button { background:transparent; color:var(--texto); }
+header nav button.activo { background:var(--azul); color:#fff; }
+main { padding:16px; max-width:1200px; margin:auto; }
+.fila { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
+.kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; }
+.kpi { background:#fff; border:1px solid var(--borde); border-radius:10px; padding:16px; }
+.kpi b { display:block; font-size:28px; color:var(--azul); }
+.tabla-wrap { overflow-x:auto; background:#fff; border:1px solid var(--borde); border-radius:10px; }
+table { border-collapse:collapse; width:100%; font-size:14px; }
+th, td { padding:8px 10px; border-bottom:1px solid var(--borde); text-align:left; white-space:nowrap; }
+th { background:#eef2f8; }
+.PUNTUAL { color:var(--ok); font-weight:600; } .TARDANZA { color:var(--mal); font-weight:600; }
+pre { background:#fff; border:1px solid var(--borde); padding:12px; border-radius:8px; white-space:pre-wrap; }
+.ajuste { display:flex; align-items:center; gap:6px; font-size:14px; }
+.nota { color:#667; font-size:13px; }

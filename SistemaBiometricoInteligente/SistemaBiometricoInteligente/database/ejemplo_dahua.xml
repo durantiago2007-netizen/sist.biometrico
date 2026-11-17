@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Ejemplo de archivo XML de registros del biométrico Dahua (formato de prueba).
+     El importador también acepta otros nombres de etiquetas: ver DOCUMENTACION_XML.md -->
+<AttendanceRecords>
+  <Device>
+    <DeviceName>Biometrico principal</DeviceName>
+    <Model>DHI-ASA3223A-W</Model>
+    <SerialNo>AE06085PAJ13AAD</SerialNo>
+    <IP>192.168.133.90</IP>
+    <ExportTime>2026-11-05 18:00:00</ExportTime>
+  </Device>
+  <Records>
+    <Record>
+      <RecNo>1</RecNo>
+      <UserID>58</UserID>
+      <CardName>Burgos Emiliano</CardName>
+      <CardNo></CardNo>
+      <CreateTime>2026-11-05 07:55:12</CreateTime>
+      <Type>Entry</Type>
+      <AttendanceState>0</AttendanceState>
+      <Method>15</Method>
+      <Door>0</Door>
+      <Status>1</Status>
+    </Record>
+    <Record>
+      <RecNo>2</RecNo>
+      <UserID>58</UserID>
+      <CardName>Burgos Emiliano</CardName>
+      <CreateTime>2026-11-05 13:02:40</CreateTime>
+      <Type>Exit</Type>
+      <AttendanceState>1</AttendanceState>
+      <Method>15</Method>
+      <Status>1</Status>
+    </Record>
+    <Record UserID="143" CardName="SEGOVIA Jazmin" CreateTime="1793869200" Type="Entry" Method="15" Status="1"/>
+    <Record>
+      <UserID>9999</UserID>
+      <CardName>Persona Nueva Prueba</CardName>
+      <CreateTime>2026-11-05 08:20:00</CreateTime>
+      <Type>Entry</Type>
+      <Method>4</Method>
+      <Status>1</Status>
+    </Record>
+  </Records>
+</AttendanceRecords>

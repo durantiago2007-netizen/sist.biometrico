@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistema Biométrico Inteligente</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<section id="vista-login" class="login">
+  <form id="form-login" class="tarjeta">
+    <h1>Sistema Biométrico Inteligente</h1>
+    <p class="sub">Asistenciero virtual</p>
+    <label>Usuario <input name="usuario" value="admin" required></label>
+    <label>Contraseña <input name="password" type="password" required></label>
+    <button>Ingresar</button>
+    <p id="login-error" class="error"></p>
+  </form>
+</section>
+
+<!-- APLICACIÓN -->
+<section id="vista-app" hidden>
+  <header>
+    <strong>Sistema Biométrico Inteligente</strong>
+    <nav>
+      <button data-tab="panel" class="activo">Panel</button>
+      <button data-tab="asistencia">Asistencia</button>
+      <button data-tab="marcaciones">Marcaciones</button>
+      <button data-tab="empleados">Empleados</button>
+      <button data-tab="importar">Importar Dahua</button>
+    </nav>
+    <button id="btn-salir" class="secundario">Salir</button>
+  </header>
+
+  <main>
+    <div id="tab-panel" class="tab">
+      <h2>Resumen de hoy</h2>
+      <div id="kpis" class="kpis"></div>
+      <h3>Registrar marcación manual</h3>
+      <form id="form-manual" class="fila">
+        <input name="codigoBiometrico" placeholder="Código biométrico" required>
+        <input name="fechaHora" placeholder="yyyy-MM-dd HH:mm (vacío = ahora)">
+        <select name="metodo"><option>HUELLA</option><option>ROSTRO</option><option>TARJETA</option><option>PASSWORD</option><option>OTRO</option></select>
+        <button>Registrar</button>
+      </form>
+      <p id="manual-msg"></p>
+    </div>
+
+    <div id="tab-asistencia" class="tab" hidden>
+      <h2>Reporte de asistencia</h2>
+      <div class="fila"><input type="date" id="as-desde"><input type="date" id="as-hasta"><button id="as-buscar">Buscar</button></div>
+      <div class="tabla-wrap"><table id="tabla-asistencia"></table></div>
+    </div>
+
+    <div id="tab-marcaciones" class="tab" hidden>
+      <h2>Marcaciones</h2>
+      <div class="fila"><input type="date" id="ma-desde"><input type="date" id="ma-hasta"><button id="ma-buscar">Buscar</button></div>
+      <div class="tabla-wrap"><table id="tabla-marcaciones"></table></div>
+    </div>
+
+    <div id="tab-empleados" class="tab" hidden>
+      <h2>Empleados</h2>
+      <form id="form-empleado" class="fila">
+        <input type="hidden" name="id">
+        <input name="codigoBiometrico" placeholder="Código biométrico (User ID Dahua)" required>
+        <input name="documento" placeholder="Documento" required>
+        <input name="nombres" placeholder="Nombres" required>
+        <input name="apellidos" placeholder="Apellidos" required>
+        <input name="email" placeholder="Email">
+        <input name="areaId" type="number" placeholder="Área ID (1-3)">
+        <input name="horarioId" type="number" placeholder="Horario ID (1-3)">
+        <button>Guardar</button>
+      </form>
+      <div class="tabla-wrap"><table id="tabla-empleados"></table></div>
+    </div>
+
+    <div id="tab-importar" class="tab" hidden>
+      <h2>Importar registros del biométrico Dahua (XML o CSV)</h2>
+      <p>Conecta el pendrive y elige el archivo que generó el equipo:</p>
+      <ul>
+        <li><b>Card_Punch_Records_*.xml</b> → marcaciones (el principal).</li>
+        <li><b>Attendance_Shift.xml</b> → turnos/horarios.</li>
+        <li>Statistics_Report y Time_Card son reportes del equipo: no hace falta importarlos.</li>
+      </ul>
+      <p>Las marcaciones repetidas se ignoran, así que puedes subir el mismo archivo más de una vez.</p>
+      <div class="fila">
+        <input type="file" id="archivo" accept=".xml,.csv,.txt">
+        <input id="serie" placeholder="Nº de serie del equipo" value="AE06085PAJ13AAD">
+        <label class="ajuste">Ajuste de hora del equipo
+          <input id="ajuste" type="number" value="-11" min="-24" max="24" style="width:70px"> h</label>
+        <button id="btn-importar">Importar</button>
+      </div>
+      <p class="nota">El reloj del biométrico está 11 horas adelantado respecto a SmartPSS, por eso el ajuste es -11.
+        Si corrigen la hora del equipo, pongan 0.</p>
+      <div id="importar-res"></div>
+      <h3>Historial de importaciones</h3>
+      <div class="tabla-wrap"><table id="tabla-importaciones"></table></div>
+    </div>
+  </main>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+User ID,Name,Department,Time,Attendance Status
+1001,Ana Quispe,Administración,2026-10-27 07:58:12,Check In
+1002,Luis Flores,Sistemas,2026-10-27 08:14:40,Check In
+1003,María Condori,Docentes,2026-10-27 14:02:05,Check In
+1001,Ana Quispe,Administración,2026-10-27 17:03:51,Check Out
+1002,Luis Flores,Sistemas,2026-10-27 13:01:22,Check Out
+1003,María Condori,Docentes,2026-10-27 19:00:30,Check Out
